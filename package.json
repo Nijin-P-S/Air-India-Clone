@@ -1,0 +1,25 @@
+{
+  "name": "air-india-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nijin-P-S/Air-India-Clone.git"
+  },
+  "keywords": [],
+  "author": "Nijin P S",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nijin-P-S/Air-India-Clone/issues"
+  },
+  "homepage": "https://github.com/Nijin-P-S/Air-India-Clone#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20"
+  }
+}
