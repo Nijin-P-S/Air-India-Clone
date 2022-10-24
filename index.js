@@ -1,5 +1,5 @@
 const express = require("express");
-
+const {connect} = require('./src/configs/database')
 const app = express();
 
 app.get('/', (req, res) => {
@@ -13,6 +13,8 @@ app.get('/', (req, res) => {
 )
 
 
-app.listen(8080, ()=>{
+app.listen(8080, async()=>{
+    await connect();
+    console.log("Mongodb connected successfully");
     console.log("Server started");
 })
