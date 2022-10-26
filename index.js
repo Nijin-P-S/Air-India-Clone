@@ -1,7 +1,8 @@
 const express = require("express");
 const {connect} = require('./src/configs/database')
+const Routes = require('./src/routes/index')
 const app = express();
-
+app.use('/', Routes);
 app.get('/', (req, res) => {
     console.log("Successfully hitting the api");
     res.status(200)
