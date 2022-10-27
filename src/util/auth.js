@@ -59,4 +59,4 @@ passport.use(new JWTStrategy(
             done(err);
         }
     }
-))
+));
