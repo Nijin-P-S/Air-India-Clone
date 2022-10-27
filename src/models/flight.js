@@ -27,8 +27,16 @@ const flightSchema = new mongoose.Schema({
     },
     arrivalTime: {
         type : Timestamp
+    },
+    flightNumber : {
+        type : String,
+        required : true
+    },
+    price : {
+        type : Number,
+        required : true
     }
-}
+},{timestamps : true}
 )
 
 const flightModel = new mongoose.model('Flight', flightSchema);
