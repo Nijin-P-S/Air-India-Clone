@@ -29,7 +29,7 @@ userSchema.pre('save', async function encryptPassword (next){
 })
 
 
-userSchema.method.isValidPassword = async function checkValidity(password){
+userSchema.methods.isValidPassword = async function checkValidity(password){
     const user = this;
     const compare = bcrypt.compare(password, user.password);
     return compare;
