@@ -87,14 +87,14 @@ const getAllFlights = async (data) => {
             else{
                 response = await Flight.find();
             }
-        }
-        
         return response;
+        }
+        catch(err){
+            console.log(err);
     }
-    catch(err){
-        console.log(err);
-    }
+        
 }
+    
 
 
 module.exports = {
