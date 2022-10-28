@@ -5,7 +5,7 @@ const helpController = require("./../../controllers/helpController");
 const airlineController = require('../../controllers/airlineController');
 const flightController = require('../../controllers/flightController');
 const reviewController = require('../../controllers/reviewController');
-
+const bookingController = require('../../controllers/bookingController');
 
 router.get('/help', helpController.helpDetails);
 router.post('/airline', airlineController.createAirline);
@@ -23,5 +23,9 @@ router.post('/review', reviewController.createReview);
 router.get('/review/:flightNumber/:userId', reviewController.getReview);
 router.get('/review/:flightNumber', reviewController.getAllReviews);
 router.delete('/review/:flightNumber', reviewController.destroyReview);
+
+router.post('/booking', bookingController.createBooking);
+router.get('/booking/:id/boardingPass', bookingController.boardingPass);
+router.delete('/booking/:id', bookingController.cancelBooking);
 
 module.exports = router;
